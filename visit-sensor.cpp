@@ -1,6 +1,6 @@
 #include <VisitSensor.h>
 
-VisitSensor sensor(A0, A1);
+VisitSensor sensor(A0, A1, 15000);
 
 void setup() {
     Serial.begin(9600);
