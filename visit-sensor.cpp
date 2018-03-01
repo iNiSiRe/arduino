@@ -1,4 +1,4 @@
-#include <VisitSensor.h>
+#include "libraries/VisitSensor/VisitSensor.h"
 
 VisitSensor sensor(A0, A1);
 
@@ -10,11 +10,11 @@ void loop() {
 
     sensor.loop();
 
-    if (sensor.detectedDirection == IN) {
+    if (sensor.detectedDirection == VisitSensor::IN) {
         Serial.println("Increment");
     }
 
-    if (sensor.detectedDirection == OUT) {
+    if (sensor.detectedDirection == VisitSensor::OUT) {
         Serial.println("Decrement");
     }
 }
